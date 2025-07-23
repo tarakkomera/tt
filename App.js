@@ -23,6 +23,20 @@ export default function App() {
     <div ref={myRef} className="min-h-screen bg-gray-100">
       <Nav />
       <main className="p-4">
+       <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+        <Counter />
+        <useWindowWidth />
+        {/* The main content will be rendered here */}
+        <h1 className="text-2xl font-bold">Welcome to the App</h1>
+        <p className="mt-2">This is the main content area.</p>
+       
+
        
       </main>
 
